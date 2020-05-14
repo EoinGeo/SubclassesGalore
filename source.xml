@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="source.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/third-party/arcanum-worlds/odyssey-of-the-dragonlords/source.xml" />
+			<file name="source.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/source.xml" />
 		</update>
 	</info>
 	<element name="Subclasses Galore" type="Source" source="Subclasses Galore" id="ID_SOURCE_SUBCLASSES_GALORE">
@@ -12,7 +12,7 @@
 		<setters>
 			<set name="abbreviation">SG</set>
             <set name="url">https://www.google.com/</set>
-			<set name="author" abbreviation="ACD" url="https://www.google.com/">A curious DM</set>
+			<set name="author" abbreviation="ACD">A curious DM</set>
 			<set name="homebrew">true</set>
 		</setters>
 	</element>

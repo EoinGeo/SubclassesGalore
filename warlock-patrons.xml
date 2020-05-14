@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<update version="0.0.1">
+			<file name="warlock-patrons.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/warlock-patrons.xml" />
+		</update>
+	</info>
 	<element name="Glorious Deity" type="Archetype" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_OTHERWORLDLY_PATRON_DEITY">
 		<supports>Otherworldly Patron</supports>
 		<description>

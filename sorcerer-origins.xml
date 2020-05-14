@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="sorcerer_origins.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/warlock-patrons.xml" />
+		</update>
+	</info>
+</elements>
