@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="sorcerer_origins.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/warlock-patrons.xml" />
+			<file name="sorcerer_origins.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/sorcerer-origins.xml" />
 		</update>
 	</info>
 </elements>
