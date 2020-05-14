@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Unearthed Arcana</name>
+		<description>A Lot of subclasses, found through reddit or made myself.</description>
+		<author>A Curious DM</author>
+		<update version="0.0.1">
+			<file name="subclasses-galore.index" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/subclasses-galore.index" />
+		</update>
+	</info>
+	<files>
+		<file name="warlock-patrons.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/subclasses-galore/warlock-patrons.xml" />
+		<file name="source.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/subclasses-galore/source.xml" />
+		<file name="sorcerer_origins.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/subclasses-galore/sorcerer-origins.xml" />
+	</files>
+</index>
