@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Glorious Deity" type="Archetype" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_OTHERWORLDLY_PATRON_DEITY">
+		<supports>Otherworldly Patron</supports>
+		<description>
+			<p>You have made a pact with a diety of the upper planes who strives to have a lower diety underneath them to grow their own power.</p>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN"/>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT"/>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR"/>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE"/>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY"/>
+		</description>
+		<sheet display="false">
+			<description>You have made a pact with a Deity from the upper planes of existence.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN" level="1" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT" level="1" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR" level="6" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE" level="10" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY" level="14" />
+		</rules>
+	</element>
+	<element name="Deity Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN">
+		<description>
+			<p>Starting at 1st level, choose the divine domain of your patron from the following list. You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">DEITY EXPANDED SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person,minor illusion </i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<rules>
+			<select type="Archetype Feature" name="Divine Domain, Godly Patron" supports="Godly Patron Divine Domain" />
+		</rules>
+	</element>
+		<!-- Godly Patron options -->
+	<element name="Plague Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_DEATH_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast bane or ray of sickness without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BANE" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_RAY_OF_SICKNESS" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Knowledge Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_KNOWLEDGE_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast command or guiding bolt without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_COMMAND" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Life Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_LIFE_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast cure wounds or bless without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Nature Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_NATURE_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast entangle or healing word without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ENTANGLE" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Light Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_LIGHT_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast burning hands or faerie fire without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Tempest Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_TEMPEST_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast fog cloud or thunderwave without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FOG_CLOUD" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="Trickery Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_TRICKERY_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast charm person or minor illusion without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" spellcasting="Warlock" />
+        </rules>
+    </element>
+    <element name="War Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_WAR_DOMAIN">
+		<compendium display="false" />
+        <supports>Godly Patron Divine Domain</supports>
+        <description>
+			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
+			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
+				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
+				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
+				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
+				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
+                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
+                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+            <description usage="1/Short Rest">You can cast shield of faith or thunderous smite without expending a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_PHB_SPELL_THUNDEROUS_SMITE" spellcasting="Warlock" />
+        </rules>
+    </element>
+	<element name="Godly Empowerment" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT">
+		<description>
+			<p>Starting at 1st level,once per short rest you ask your patron to empower your spells adding damage equal to your Charisma modifier + your warlock level (minimum of 1).</p>
+		</description>
+		<sheet>
+			<description usage="1/Short Rest">You ask your patron tp empower your spells adding {{godly damage:temp hp}} damage.</description>
+		</sheet>
+		<rules>
+			<stat name="godly damage:damage" value="charisma:modifier" />
+			<stat name="godly damage:damage" value="level:warlock" />
+		</rules>
+	</element>
+	<element name="Godly Benefector" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR">
+		<description>
+			<p>Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll’s effects occur.</p>
+			<p class="indent">Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+			<description>When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll.</description>
+		</sheet>
+	</element>
+	<element name="Godly Resilience" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE">
+		<description>
+			<p>Starting at 10th level, you are resistant to one type of damage decided by your domain.</p>
+			<table>
+				<thead>
+					<tr><td>Divine Domain</td><td>Resistance</td></tr>
+				</thead>
+				<tr><td>Plague</td><td><i>Poison</i></td></tr>
+				<tr><td>Knowledge</td><td><i>Psychic</i></td></tr>
+				<tr><td>Life</td><td><i>Radiant</i></td></tr>
+				<tr><td>Nature</td><td><i>Acid</i></td></tr>
+				<tr><td>Light</td><td><i>Radiant</i></td></tr>
+                <tr><td>Tempest</td><td><i>Thunder</i></td></tr>
+                <tr><td>Trickery</td><td><i>Psychic</i></td></tr>
+                <tr><td>War</td><td><i>Bludgeoning</i></td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description> You gain resistance to that damage type chosen by your domain </description>
+		</sheet>
+	</element>
+	<element name="Divine Unleashment" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY">
+		<description>
+			<p>Starting at 14th level, when you hit a foe with an attack, you can use this feature to instantly unleash divine energy from your patron into your foe</p>
+			<p class="indent">If the target fails a DC15 Constitution save, it takes 6d10 Radiant damage, on a success take half.</p>
+			<p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
+			<p class ="indent">You also must succeed a DC13 Consitution save or take 1d12 Radiant Damage from the energy through you </p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you hit a foe with an attack, you can use this feature to instantly unleash divine energy from your patron into your foe, causing a DC15 CON save, doing 6d10 Radiant Damage on a Failure or half on a success, while you have a DC12 CON Save or take 1d12 Radiant Damage</description>
+		</sheet>
+	</element>
+</elements>
