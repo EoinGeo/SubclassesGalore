@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="source.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/source.xml" />
+			<file name="source.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/subclasses-galore/source.xml" />
 		</update>
 	</info>
 	<element name="Subclasses Galore" type="Source" source="Subclasses Galore" id="ID_SOURCE_SUBCLASSES_GALORE">
@@ -13,7 +13,7 @@
 			<set name="abbreviation">SG</set>
             <set name="url">https://www.google.com/</set>
 			<set name="author" abbreviation="ACD">A curious DM</set>
-			<set name="homebrew">true</set>
+			<set name="Subclasses Galore">true</set>
 		</setters>
 	</element>
 </elements>
