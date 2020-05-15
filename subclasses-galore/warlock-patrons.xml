@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.3">
 			<file name="warlock-patrons.xml" url="https://raw.githubusercontent.com/EoinGeo/SubclassesGalore/master/warlock-patrons.xml" />
 		</update>
 	</info>
@@ -11,8 +11,8 @@
 			<p>You have made a pact with a diety of the upper planes who strives to have a lower diety underneath them to grow their own power.</p>
 			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN"/>
 			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT"/>
-			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR"/>
 			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE"/>
+			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR"/>
 			<div element="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY"/>
 		</description>
 		<sheet display="false">
@@ -21,309 +21,305 @@
 		<rules>
 			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN" level="1" />
 			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT" level="1" />
-			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR" level="6" />
-			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE" level="10" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE" level="6" />
+			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_GODLY_PRESCENCE" level="10" />
 			<grant type="Archetype Feature" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY" level="14" />
 		</rules>
 	</element>
-	<element name="Deity Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN">
-		<description>
-			<p>Starting at 1st level, choose the divine domain of your patron from the following list. You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">DEITY EXPANDED SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person,minor illusion </i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<rules>
-			<select type="Archetype Feature" name="Divine Domain, Godly Patron" supports="Godly Patron Divine Domain" />
-		</rules>
-	</element>
-		<!-- Godly Patron options -->
-	<element name="Plague Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_DEATH_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast bane or ray of sickness without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_BANE" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_RAY_OF_SICKNESS" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Knowledge Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_KNOWLEDGE_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast command or guiding bolt without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_COMMAND" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Life Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_LIFE_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast cure wounds or bless without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_BLESS" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Nature Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_NATURE_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast entangle or healing word without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_ENTANGLE" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Light Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_LIGHT_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast burning hands or faerie fire without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Tempest Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_TEMPEST_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast fog cloud or thunderwave without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_FOG_CLOUD" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="Trickery Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_TRICKERY_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast charm person or minor illusion without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" spellcasting="Warlock" />
-        </rules>
-    </element>
-    <element name="War Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_PATRON_WAR_DOMAIN">
-		<compendium display="false" />
-        <supports>Godly Patron Divine Domain</supports>
-        <description>
-			<p>You can cast each of the associated spells once without using any spell slots, and you regain the ability to do so after completing a short or long rest.</p>
-			<h5 class="caption">PATRON DOMAINS AND SPELLS</h5>
-			<table>
-				<thead>
-					<tr><td>Divine Domain</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>Plague</td><td><i>bane, ray of sickness</i></td></tr>
-				<tr><td>Knowledge</td><td><i>command, guiding bolt</i></td></tr>
-				<tr><td>Life</td><td><i>cure wounds, bless</i></td></tr>
-				<tr><td>Nature</td><td><i>entangle, healing word</i></td></tr>
-				<tr><td>Light</td><td><i>burning hands, faerie fire</i></td></tr>
-                <tr><td>Tempest</td><td><i>fog cloud, thunderwave</i></td></tr>
-                <tr><td>Trickery</td><td><i>charm person, minor illusion</i></td></tr>
-                <tr><td>War</td><td><i>shield of faith, thunderous smite</i></td></tr>
-			</table>
-		</description>
-		<sheet>
-            <description usage="1/Short Rest">You can cast shield of faith or thunderous smite without expending a spell slot.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" spellcasting="Warlock" />
-			<grant type="Spell" id="ID_PHB_SPELL_THUNDEROUS_SMITE" spellcasting="Warlock" />
-        </rules>
-    </element>
 	<element name="Godly Empowerment" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_EMPOWERMENT">
 		<description>
-			<p>Starting at 1st level,once per short rest you ask your patron to empower your spells adding damage equal to your Charisma modifier + your warlock level (minimum of 1).</p>
+			<p>You learn a cleric cantrip of your choice, and it becomes a warlock spell for you. You learn another cantrip of your choice from the cleric spell list at 10th level.</p>
 		</description>
-		<sheet>
-			<description usage="1/Short Rest">You ask your patron tp empower your spells adding {{godly damage:temp hp}} damage.</description>
-		</sheet>
 		<rules>
-			<stat name="godly damage:damage" value="charisma:modifier" />
-			<stat name="godly damage:damage" value="level:warlock" />
+			<select type="Spell" name="Cantrip (Deity Domain)" supports="0,Cleric" spellcasting="Deity Patron" number="1" />
+			<select type="Spell" name="Cantrip (Deity Domain)" supports="0,Cleric" spellcasting="Deity Patron" number="1" level="10"/>
 		</rules>
 	</element>
-	<element name="Godly Benefector" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_BENEFACTOR">
+	<element name="Godly Prescence" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_GODLY_PRESCENCE">
 		<description>
-			<p>Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll’s effects occur.</p>
-			<p class="indent">Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+			<p> Starting at 10th level The prescence of your divine patron can flow through you, to sway the mind of those around you</p>
+			<p class="indent"> You double your proficiency on persuasion and intimidation </p>
+			<p class="indent"> You gain a +1 to your Charisma score and another +1 at 14th level. </p>
 		</description>
-		<sheet usage="1/Short Rest">
-			<description>When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll.</description>
+		<sheet>
+			<description>You double your proficiency on persuasion and intimidation</description>
 		</sheet>
-	</element>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<stat name="intimidation:proficiency" value="proficiency" bonus="double" />
+			<stat name="persuasion:proficiency" value="proficiency" bonus="double" />
+			<stat name="charisma" value="1" alt="Godly Prescence" />
+			<stat name="charisma" value="1" alt="Godly Prescence" level="14" />
+		</rules>
+	</element>	
 	<element name="Godly Resilience" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_GODLY_RESILIENCE">
 		<description>
-			<p>Starting at 10th level, you are resistant to one type of damage decided by your domain.</p>
+			<p>Starting at 6th level, you are resistant to Radiant and another type of damage dependent on your diety's domain</p>
 			<table>
 				<thead>
 					<tr><td>Divine Domain</td><td>Resistance</td></tr>
 				</thead>
-				<tr><td>Plague</td><td><i>Poison</i></td></tr>
 				<tr><td>Knowledge</td><td><i>Psychic</i></td></tr>
-				<tr><td>Life</td><td><i>Radiant</i></td></tr>
-				<tr><td>Nature</td><td><i>Acid</i></td></tr>
-				<tr><td>Light</td><td><i>Radiant</i></td></tr>
-                <tr><td>Tempest</td><td><i>Thunder</i></td></tr>
+				<tr><td>Life</td><td><i>Necrotic</i></td></tr>
+				<tr><td>Nature</td><td><i>Poison</i></td></tr>
+				<tr><td>Light</td><td><i>Fire</i></td></tr>
+                <tr><td>Tempest</td><td><i>Lightning</i></td></tr>
                 <tr><td>Trickery</td><td><i>Psychic</i></td></tr>
                 <tr><td>War</td><td><i>Bludgeoning</i></td></tr>
 			</table>
 		</description>
 		<sheet>
-			<description> You gain resistance to that damage type chosen by your domain </description>
+			<description> You gain resistance to Radiant and another damage type dependent on your diety's domain </description>
 		</sheet>
 	</element>
 	<element name="Divine Unleashment" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DIVINE_ENERGY">
 		<description>
 			<p>Starting at 14th level, when you hit a foe with an attack, you can use this feature to instantly unleash divine energy from your patron into your foe</p>
-			<p class="indent">If the target fails a DC15 Constitution save, it takes 6d10 Radiant damage, on a success take half.</p>
+			<p class="indent">If the target fails a Constitution save of your spellcasting DC, it takes 6d10 Radiant damage, on a success take half.</p>
 			<p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
-			<p class ="indent">You also must succeed a DC13 Consitution save or take 1d12 Radiant Damage from the energy through you </p>
 		</description>
 		<sheet usage="1/Long Rest">
 			<description>When you hit a foe with an attack, you can use this feature to instantly unleash divine energy from your patron into your foe, causing a DC15 CON save, doing 6d10 Radiant Damage on a Failure or half on a success, while you have a DC12 CON Save or take 1d12 Radiant Damage</description>
 		</sheet>
+	</element>	
+	<element name="Deity Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_SUB_GALORE_ARCHETYPE_FEATURE_DEITY_DOMAIN">
+		<description>
+			<p>You gain a spell list from the list of your Patrons Domains</p>
+			<p>Each domain has a list of spells—its domain spells—that you gain at the warlock levels noted in the domain description. Once you gain a domain spell, you can prepare it.</p>
+			<p class="indent">If you have a domain spell that doesn’t appear on the warlock spell list, the spell is nonetheless a warlock spell for you.</p>
+			<p class="indent">You gain a number of preparation slots equal to your charisma modifier</p>
+		</description>
+		<spellcasting name="Deity Patron" ability="Charisma" prepare="true"></spellcasting>
+		<rules>
+			<stat name="Deity Patron:spellcasting:prepare" value="charisma:modifier" />
+			<select type="Archetype Feature" name="Divine Patron Domain" supports="Divine Patron Domain" />
+		</rules>
+	</element>
+	<element name="Life Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_LIFEDOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+		<p>The Life domain focuses on the vibrant positive energy— one of the fundamental forces of the universe—that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).</p>
+			<h5 class="caption">LIFE DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>bless, cure wounds</em></td></tr>
+				<tr><td>3rd</td><td><em>lesser restoration, spiritual weapon</em></td></tr>
+				<tr><td>5th</td><td><em>beacon of hope, revivify</em></td></tr>
+				<tr><td>7th</td><td><em>death ward, guardian of faith</em></td></tr>
+				<tr><td>9th</td><td><em>mass cure wounds, raise dead</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The Life domain focuses on the vibrant positive energy— one of the fundamental forces of the universe—that sustains all life.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS" level="1" spellcasting="Deity Patron"/>
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIRITUAL_WEAPON" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_BEACON_OF_HOPE" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_GUARDIAN_OF_FAITH" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_RAISE_DEAD" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>
+
+	<element name="Knowledge Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_KNOWLEDGE_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>The gods of knowledge—including Oghma, Boccob, Gilean, Aureon, and Thoth—value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.</p>
+			<h5 class="caption">KNOWLEDGE DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>command, identify</em></td></tr>
+				<tr><td>3rd</td><td><em>augury, suggestion</em></td></tr>
+				<tr><td>5th</td><td><em>nondetection, speak with dead</em></td></tr>
+				<tr><td>7th</td><td><em>arcane eye, confusion</em></td></tr>
+				<tr><td>9th</td><td><em>legend lore, scrying</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The gods of knowledge value learning and understanding above all.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_COMMAND" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_IDENTIFY" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_AUGURY" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_NONDETECTION" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_ARCANE_EYE" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_CONFUSION" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_LEGEND_LORE" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SCRYING" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>
+	<element name="Light Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_LIGHT_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>Gods of light—including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty—promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods’ discerning vision, charged with chasing away lies and burning away darkness.</p>
+			<h5 class="caption">LIGHT DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>burning hands, faerie fire</em></td></tr>
+				<tr><td>3rd</td><td><em>flaming sphere, scorching ray</em></td></tr>
+				<tr><td>5th</td><td><em>daylight, fireball</em></td></tr>
+				<tr><td>7th</td><td><em>guardian of faith, wall of fire</em></td></tr>
+				<tr><td>9th</td><td><em>flame strike, scrying</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>Gods of light promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FLAMING_SPHERE" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DAYLIGHT" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_GUARDIAN_OF_FAITH" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FLAME_STRIKE" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SCRYING" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>
+	<element name="Nature Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_NATURE_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests (such as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to friendly deities associated with particular springs and groves (such as Eldath). Druids revere nature as a whole and might serve one of these deities, practicing mysterious rites and reciting all-but-forgotten prayers in their own secret tongue. But many of these gods have clerics as well, champions who take a more active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.</p>
+			<h5 class="caption">NATURE DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>animal friendship, speak with animals</em></td></tr>
+				<tr><td>3rd</td><td><em>barkskin, spike growth</em></td></tr>
+				<tr><td>5th</td><td><em>plant growth, wind wall</em></td></tr>
+				<tr><td>7th</td><td><em>dominate beast, grasping vine</em></td></tr>
+				<tr><td>9th</td><td><em>insect plague, tree stride</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests to friendly deities associated with particular springs and groves.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMAL_FRIENDSHIP" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_BARKSKIN" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIKE_GROWTH" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_PLANT_GROWTH" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_WIND_WALL" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_BEAST" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_GRASPING_VINE" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_INSECT_PLAGUE" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_TREE_STRIDE" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>
+	<element name="Tempest Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_TEMPEST_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>Gods whose portfolios include the Tempest domain - including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor—govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.</p>
+			<h5 class="caption">TEMPEST DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>fog cloud, thunderwave</em></td></tr>
+				<tr><td>3rd</td><td><em>gust of wind, shatter</em></td></tr>
+				<tr><td>5th</td><td><em>call lightning, sleet storm</em></td></tr>
+				<tr><td>7th</td><td><em>control water, ice storm</em></td></tr>
+				<tr><td>9th</td><td><em>destructive wave, insect plague</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>Gods whose portfolios include the Tempest domain govern storms, sea, and sky.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_FOG_CLOUD" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_GUST_OF_WIND" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SHATTER" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_CALL_LIGHTNING" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SLEET_STORM" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_CONTROL_WATER" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DESTRUCTIVE_WAVE" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_INSECT_PLAGUE" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>
+
+	<element name="Trickery Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_Trickery_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>Gods of trickery—such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki—are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They’re patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.</p>
+			<h5 class="caption">TRICKERY DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>charm person, disguise self</em></td></tr>
+				<tr><td>3rd</td><td><em>mirror image, pass without trace</em></td></tr>
+				<tr><td>5th</td><td><em>blink, dispel magic</em></td></tr>
+				<tr><td>7th</td><td><em>dimension door, polymorph</em></td></tr>
+				<tr><td>9th</td><td><em>dominate person, modify memory</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>Gods of trickery are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_PASS_WITHOUT_TRACE" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_BLINK" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DISPEL_MAGIC" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DIMENSION_DOOR" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_POLYMORPH" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_MODIFY_MEMORY" level="9" spellcasting="Deity Patron"  />
+		</rules>
+	</element>	
+	<element name="War Domain" type="Archetype Feature" source="Subclasses Galore" id="ID_WOTC_PHB_ARCHETYPE_DEITY_PATRON_War_DOMAIN">
+		<supports>Divine Patron Domain</supports>
+		<description>
+			<p>War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as Torm, Heironeous, and Kiri- Jolith) as well as gods of destruction and pillage (such as Erythnul, the Fury, Gruumsh, and Ares) and gods of conquest and domination (such as Bane, Hextor, and Maglubiyet). Other war gods (such as Tempus, Nike, and Nuada) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.</p>
+			<h5 class="caption">WAR DOMAIN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>divine favor, shield of faith</em></td></tr>
+				<tr><td>3rd</td><td><em>magic weapon, spiritual weapon</em></td></tr>
+				<tr><td>5th</td><td><em>crusader’s mantle, spirit guardians</em></td></tr>
+				<tr><td>7th</td><td><em>freedom of movement, stoneskin</em></td></tr>
+				<tr><td>9th</td><td><em>flame strike, hold monster</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The gods of war watch over warriors and reward them for their great deeds.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DIVINE_FAVOR" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" level="1" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_MAGIC_WEAPON" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIRITUAL_WEAPON" level="3" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_CRUSADERS_MANTLE" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_SPIRIT_GUARDIANS" level="5" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_STONESKIN" level="7" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_FLAME_STRIKE" level="9" spellcasting="Deity Patron"  />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="9" spellcasting="Deity Patron"  />
+		</rules>
 	</element>
 </elements>
